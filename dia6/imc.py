@@ -1,7 +1,7 @@
 nombre = input("Ingrese su nombre \n")
 print(f"Hola {nombre}, a continuación le pediré algunos datos para calcular su Índice de Masa Corporal(o IMC). Recuerde que este índice es solo un número y que no representa su estado de salud, por lo que debe asesorarse con un médico u otro profesional del área.")
-peso = int(input("Por favor ingrese su peso en kilogramos \n"))
-altura = int(input("Por favor ingrese su altura en centímetros \n"))
+peso = float(input("Por favor ingrese su peso en kilogramos \n"))
+altura = float(input("Por favor ingrese su altura en centímetros \n"))
 while altura <=0:
     print("Valor de estatura incorrecto")
     altura = int(input("Por favor ingrese su altura en centímetros \n"))
