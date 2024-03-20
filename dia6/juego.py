@@ -10,6 +10,7 @@ usuario = usuario.title()
 while usuario != "Piedra" and usuario != "Papel" and usuario != "Tijera":
     print("Jugada no válida")
     usuario=input("Ingresa tu jugada (Piedra, Papel o Tijera): \n")
+    usuario = usuario.title()
 
 print(f"Jugaste: {usuario}")
 print(f"El computador jugó: {computador}")
