@@ -19,8 +19,11 @@ if respuesta == "N":
                 print("¿Llegó la ambulancia?")
                 respuesta = input("¿Si o No?").upper()
                 if respuesta == "S":
+                    print("Sistema finalizado, mucho éxito")
                     break
     else:
         print("Permitirle posición de suficiente ventilación")
+        print("Sistema finalizado, mucho éxito")
 else:
     print("Valorar la necesidad de llevarlo al hospital más cercano")
+    print("Sistema finalizado, mucho éxito")

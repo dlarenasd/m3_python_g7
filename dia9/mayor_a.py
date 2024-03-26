@@ -16,14 +16,14 @@ ventas = {
     "Diciembre": 21000,
 }
 
-while i < 0:
-    print("Error, ingresar un monto válido") #validación y cierre
-    sys.exit(1)
 ventas_mayores_que = {} #Nuevo Diccionario
 for mes , venta in ventas.items(): # Para clave,valor en el diccionario
-    if i <= venta:    #si lo ingresado es menor o igual a una venta
+    if i < venta:    #si lo ingresado es menor o igual a una venta
         ventas_mayores_que[mes]= venta #se incluye en la nueva biblioteca
 print(ventas_mayores_que)
+
+diccionario2 = {mes:venta for mes, venta in ventas.items() if venta > i}
+print(diccionario2)
 
 """
 print(f"Se detectó un mes con ingresos mayores a {i}") 
