@@ -29,7 +29,7 @@ list_dicc1=list({"nota1":5,
 print(list_dicc1) #dict_items([('nota1', 5), ('nota2', 6)])
 print(list_dicc1[0]) #TypeError: 'dict_items' object is not subscriptable/// ('nota1', 5)
 
-print(list_dicc1[0][0])
-print(list_dicc1[0][1])
-print(list_dicc1[1][0])
-print(list_dicc1[1][1])
+print(list_dicc1[0][0]) #nota1
+print(list_dicc1[0][1]) #5
+print(list_dicc1[1][0]) #nota2
+print(list_dicc1[1][1]) #6

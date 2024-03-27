@@ -78,3 +78,10 @@ print(notas2.items())#dict_items([('Manuel', 2), ('Marcelo', 5), ('Felipe', 6), 
 print(notas2.get("Marcelo")) #5 --> diccionario.get(clave) -->retorna el valor asociado a la clave
 print(notas2.get("Pedro")) #None --> Al consultar por una clave no existente, retornará por Default "None"
 print(notas2.get("Pedro","Valor no existe"))#Valor no existe -->se puede especificar el valor de retorno al no existir la clave
+
+
+""" 
+transformar una lista en diccionario -->(una lista de tuplas)usando el método .dict()
+transformar en tupla-->método .tuple()
+transformar en set -->método .set()
+"""
