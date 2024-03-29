@@ -2,10 +2,10 @@ import sys
 
 
 def filtrar(diccionario,umbral):
-    if len(sys.argv) == 1:
+    if len(sys.argv) == 2:
         filtro = {producto:valor for producto,valor in diccionario.items() if valor>umbral}  
         return filtro
-    elif len(sys.argv) >1:
+    elif len(sys.argv) >2:
         if sys.argv[2].lower()=="mayor":
             filtro = {producto:valor for producto,valor in diccionario.items() if valor>umbral}  
             return filtro
@@ -22,7 +22,7 @@ def lista_productos():
     return productos
 
 def respuesta():
-    if len(sys.argv) ==1:
+    if len(sys.argv) ==2:
         return (f"Los productos mayores al umbral son: {", ".join(productos)}")
     elif sys.argv[2].lower()=="mayor":
         return (f"Los productos mayores al umbral son: {", ".join(productos)}")
@@ -40,6 +40,7 @@ precios = {'Notebook': 700000,
     'Tarjeta de Video': 1500000}
 
 productos=[]
+
 
 filtro = filtrar(precios, int(sys.argv[1]))
 productos=lista_productos()
