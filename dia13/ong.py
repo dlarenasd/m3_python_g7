@@ -12,16 +12,10 @@ def prod_i(lista):
     return productoria
 
 def calcular(**elementos):
-    resultados=[]   
     for clave,valor in elementos.items():
         if "fact" in clave:
-            mensaje = f"El factorial de {valor} es {fact_i(valor)}"
-            resultados.append(mensaje)
+            print(f"El factorial de {valor} es {fact_i(valor)}")
         elif "prod" in clave:
-            mensaje =f"La productoria de {valor} es {prod_i(valor)}"
-            resultados.append(mensaje)
-    return resultados
+            print(f"La productoria de {valor} es {prod_i(valor)}")
 
-resultados=calcular(fact_1 = 5, prod_1=[4,6,7,4,3], fact_2=6)
-for resultado in resultados:
-    print(resultado)
+calcular(fact_1 = 5, prod_1=[4,6,7,4,3], fact_2=6)
