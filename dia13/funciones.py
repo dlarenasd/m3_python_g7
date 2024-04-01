@@ -15,8 +15,13 @@ def imprimir_menu():
     print("3) No me interesa")
 
 def imprimir_respuestas():
-    for i in range(len(respuestas)):
-        print(f"La respuesta a la Pregunta nro.{i+1} fue {respuestas[i]} ")
+    for i in range(len(respuestas)): #iteraciones de respuestas, cuántas veces? el tamaño de respuestas
+        print(f"La respuesta a la Pregunta nro.{i+1} fue {respuestas[i]} ") #recordando que i parte en 0, se plantea este print
+        
+""" 
+for posicion, respuesta in enumerate(respuestas):
+    print(f"La respuesta a la pregunta {posicion+1} fue {respuesta}") -->esto también serviría, recordando que enumerate entrega posiciones y parte en 0
+"""
 
 preguntas=["Pregunta nro.1","Pregunta nro.2", "Pregunta nro.3"]
 respuestas=[]
