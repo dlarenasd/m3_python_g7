@@ -17,7 +17,12 @@ correcto = True
 p_level = 10
 op_sys = 'cls' if sys.platform == 'win32' else 'clear'
 
-
+""" GRUPO 3
+- Diego Larenas
+- Claudio Méndez
+- Juan Torres
+- Matías Valdivia *(parte del grupo, pero no estuvo durante la elaboración del desafío) 
+"""
 # ----------------------------------------
 
 os.system(op_sys) # limpiar pantalla
