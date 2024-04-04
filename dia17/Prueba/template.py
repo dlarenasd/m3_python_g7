@@ -10,7 +10,7 @@ def html_template():
     <h1 class="text-center">Aves de Chile</h1>
     <div class="container">
         <div class="row gx-3 gy-3">
-                $cards
+            $cards
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -20,15 +20,15 @@ def html_template():
     return html_template
 
 def cards_template():
-    card_template = Template("""<div class="col-10, col-md-4">
-            <div class="card" style="width: 18em;">
+    card_template = Template("""<div class="col-12, col-lg-4">
+            <div class="card">
                 <img src="$url" class="card-img-top" alt="$txt_es">
                 <div class="card-body">
-                    <p class="card-text">$txt_es</p>
-                    <p class="card-text">$txt_en</p>
+                    <p class="card-text fs-4 fw-bold">$txt_es</p>
+                    <p class="card-text fs-4 fw-bold">$txt_en</p>
                 </div>
             </div>
-        </div>""") #card_template.substitute(url="xxxxxxx", txt_es="xxxxxxx", txt_en="xxxxxxx") // les dejo un div de columna para que cada card se comporte como columna (y responsiva)
+        </div>""") #card_template.substitute(url="xxxxxxx", txt_es="xxxxxxx", txt_en="xxxxxxx") // les dejo un div de columna para que cada card se comporte como columna 
     return card_template
 
 

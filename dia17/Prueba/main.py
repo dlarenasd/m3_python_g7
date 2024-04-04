@@ -36,7 +36,7 @@ html_template = template.html_template() #asocio una variable al template obteni
 html = html_template.substitute(cards = cards) #sustituyo en el template y relleno con la variable cards que contiene las 216 cards
 #print(html)
 
-with open('dia17/Prueba/index.html', 'w') as file:  #abro un archivo de nombre index.html en modo de escritura y lo relleno con el html recién hecho, luego lo exporto
+with open('dia17/Prueba/index.html', 'w', encoding="utf-8") as file:  #abro un archivo de nombre index.html en modo de escritura y lo relleno con el html recién hecho, luego lo exporto
     file.write(html)
 
 
