@@ -10,17 +10,19 @@ def request_get(url):
     Returns:
         _type_: Dependiendo del contenido de la API puede retornar un diccionario, lista, tupla ya en formato.
     """
-    return json.loads(requests.get(url).text)
+    return json.loads(requests.get(url).text) #de la librería json uso el método loads que toma la solicitud de la URL y le da el formato correspondiente, luego lo pasa a texto
 
 response = request_get("https://aves.ninjas.cl/api/birds") #solicito el contenido de la API con la función
 
 #print(len(response)) --->tiene 216 elementos
 #print(type(response)) ---><class 'list'>
 #print(response[0]) -->{'uid': '76-buteo-albigula', 'name': {'spanish': 'Aguilucho Chico', 'english': 'White-throated Hawk', 'latin': 'Buteo albigula'}, 'images': {'main': 'https://aves.ninjas.cl/api/site/assets/files/3099/17082018024245aguilucho_chico_tomas_rivas_web.200x0.jpg', 'full': 'https://aves.ninjas.cl/api/site/assets/files/3099/17082018024245aguilucho_chico_tomas_rivas_web.jpg', 'thumb': 'https://aves.ninjas.cl/api/site/assets/files/3099/17082018024245aguilucho_chico_tomas_rivas_web.200x0.jpg'}, '_links': {'self': 'https://aves.ninjas.cl/api/birds/76-buteo-albigula', 'parent': 'https://aves.ninjas.cl/api/birds'}, 'sort': 0}
-#cada elemento de la lista response es un diccionario
+#cada elemento de la lista response es un diccionario con las siguientes claves: 'uid', 'name', 'images', '_links', 'sort'
+
 lista_url_fotos = []
-nombre_es = []
+nombre_es = [] #listas vacías para capturar datos
 nombre_en = []
+
 for diccionario in response: #recorro cada diccionario de la lista obtenida
     lista_url_fotos.append(diccionario['images']['main']) #e incluyo en una lista las URL de las fotos
     nombre_es.append(diccionario['name']['spanish']) #también armo una lista para los nombres en español
@@ -36,7 +38,7 @@ html_template = template.html_template() #asocio una variable al template obteni
 html = html_template.substitute(cards = cards) #sustituyo en el template y relleno con la variable cards que contiene las 216 cards
 #print(html)
 
-with open('dia17/Prueba/index.html', 'w', encoding="utf-8") as file:  #abro un archivo de nombre index.html en modo de escritura y lo relleno con el html recién hecho, luego lo exporto
+with open('dia17/Prueba/index.html', 'w', encoding="utf-8") as file:  #abro un archivo de nombre index.html en modo de escritura y lo relleno con el html recién hecho, se genera o se sobreescribe
     file.write(html)
 
 
