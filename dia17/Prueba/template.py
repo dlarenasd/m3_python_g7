@@ -3,7 +3,7 @@ def html_template():
     """función para elaborar un Template de HTML
 
     Returns:
-        str: HTML escrito como string listo para que se le agreguen las cards
+        str.Template: HTML escrito como string listo para que se le agreguen las cards
     """
     html_template = Template('''<!DOCTYPE html>
     <html>
@@ -28,7 +28,7 @@ def cards_template():
     """función para elaborar un Template de card
 
     Returns:
-        str: Card escrita como string lista para que se le agreguen la URL y los textos en español e inglés. 
+        str.Template: Card escrita como string lista para que se le agreguen la URL y los textos en español e inglés. 
         Adicionalmente tiene un div para que se comporten como columna y sean responsivas.
     """
     card_template = Template("""<div class="col-12, col-lg-4">

@@ -42,7 +42,3 @@ with open('dia17/Prueba/index.html', 'w', encoding="utf-8") as file:  #abro un a
     file.write(html)
 
 
-
-
-
-    
