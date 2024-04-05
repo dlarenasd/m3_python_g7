@@ -1,5 +1,10 @@
 from string import Template
 def html_template():
+    """función para elaborar un Template de HTML
+
+    Returns:
+        str: HTML escrito como string listo para que se le agreguen las cards
+    """
     html_template = Template('''<!DOCTYPE html>
     <html>
     <head>
@@ -20,6 +25,12 @@ def html_template():
     return html_template
 
 def cards_template():
+    """función para elaborar un Template de card
+
+    Returns:
+        str: Card escrita como string lista para que se le agreguen la URL y los textos en español e inglés. 
+        Adicionalmente tiene un div para que se comporten como columna y sean responsivas.
+    """
     card_template = Template("""<div class="col-12, col-lg-4">
             <div class="card">
                 <img src="$url" class="card-img-top" alt="$txt_es">
@@ -30,6 +41,3 @@ def cards_template():
             </div>
         </div>""") #card_template.substitute(url="xxxxxxx", txt_es="xxxxxxx", txt_en="xxxxxxx") // les dejo un div de columna para que cada card se comporte como columna 
     return card_template
-
-
-    
